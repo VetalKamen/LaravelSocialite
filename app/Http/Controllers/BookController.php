@@ -3,33 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Author;
-use App\Book;
+use App\Book as Book;
 use App\Http\Requests\StoreBook;
 
 class BookController extends Controller
 {
+
+    public function admin()
+    {
+        return view('books.admin', ['books' => Book::all(),]);
+    }
+
     /**
      * Display a listing of the resource.
      *
      */
     public function index()
     {
-        return view(
-            'books.index',
-            [
-                'books' => Book::all(),
-            ]
-        );
-    }
-
-    public function admin()
-    {
-        return view(
-            'books.admin',
-            [
-                'books' => Book::all(),
-            ]
-        );
+        return view('books.index', ['books' => Book::all(),]);
     }
 
     /**
@@ -39,10 +30,7 @@ class BookController extends Controller
     public function create()
     {
         $authors = Author::all();
-        return view(
-            'books.create',
-            ['authors' => $authors]
-        );
+        return view('books.create', ['authors' => $authors]);
     }
 
     /**
@@ -62,25 +50,17 @@ class BookController extends Controller
      * Display the specified resource.
      *
      */
-    public function show($id)
+    public function show(Book $book)
     {
-        $book = Book::findOrFail($id);
-
-        return view(
-            'books.show',
-            [
-                'book' => $book,
-            ]
-        );
+        return view('books.show', ['book' => $book,]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(Book $book)
     {
         $authors = Author::all();
-        $book = Book::findOrFail($id);
 
         return view(
             'books.edit',
@@ -96,9 +76,8 @@ class BookController extends Controller
      *
      * @param StoreBook $request
      */
-    public function update(StoreBook $request, $id)
+    public function update(StoreBook $request, Book $book)
     {
-        $book = Book::findOrFail($id);
         $validData = $request->validated();
         $book->fill($validData);
         $book->save();
@@ -110,9 +89,8 @@ class BookController extends Controller
      * Remove the specified resource from storage.
      *
      */
-    public function destroy($id)
+    public function destroy(Book $book)
     {
-        $book = Book::findOrFail($id);
         $book->delete();
 
         return redirect()->route('admin.books');

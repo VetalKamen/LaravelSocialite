@@ -3,25 +3,25 @@
     <div class="row">
         <div class="col-8">
             <div>
-                <a href="{{route('book.create')}}" class="btn btn-warning">
-                    {{__('Create')}}</a>
+                <a href="{{route('author.create')}}" class="btn btn-warning">
+                    {{ __('Create') }}</a>
             </div>
             <table class="table table-stripped">
                 <thead>
                 <tr>
-                    <th>Book</th>
+                    <th>Author</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($books as $book)
+                @foreach($authors as $author)
                     <tr>
-                        <td>{{ $book->title }}</td>
+                        <td>{{ $author->name }}</td>
                         <td>
                             <div class="d-flex">
                                 <div class="form-group row">
                                     <div class="col-5 offset-3">
-                                        <a href="{{ route('book.edit', ['book' => $book->id]) }}"
+                                        <a href="{{ route('author.edit', ['author' => $author->id]) }}"
                                            class="btn btn-success">
                                             {{ __('Edit') }}</a>
                                     </div>
@@ -29,7 +29,7 @@
                                 <div class="form-group row">
                                     <div class="col-5 offset-3">
                                         <form method="POST" class="fm-inline"
-                                              action="{{ route('book.destroy', ['book' => $book->id]) }}">
+                                              action="{{ route('author.destroy', ['author' => $author->id]) }}">
                                             @csrf
                                             @method('DELETE')
 

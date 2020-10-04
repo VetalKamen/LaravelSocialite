@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/','BookController@index')->name('books');
-Route::resource('book', 'BookController');
 Route::get('/admin','BookController@admin')->name('admin.books');
+Route::get('/admin/author','AuthorController@admin')->name('admin.authors');
+Route::resource('book', 'BookController');
+Route::resource('author', 'AuthorController');

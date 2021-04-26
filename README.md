@@ -3,7 +3,7 @@ Deploy guide:
 1. Execute 'composer install' from the root directory.
 2. Execute 'npm install' and then 'npm run dev'.
 3. Copy .env.example to .env and add your local DB_CONNECTION, DB_HOST, DB_PORT, DB_NAME(don't forget to create empty db with this name) etc., then add following keys/values for the OAuth:
-4. 
+ 
 GITHUB_CLIENT_ID='value'
 
 GITHUB_CLIENT_SECRET='value'

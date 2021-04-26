@@ -17,11 +17,6 @@ Where to get the 'value' parameters mentioned above: https://docs.github.com/en/
 7. Execute 'php artisan:serve' and follow the link that you get + '/register' or '/login' in the url
    Example:  http://127.0.0.1:8000/login
 
-Login/Register Page look:
-![photo_2021-04-26_23-28-55](https://user-images.githubusercontent.com/69465350/116146510-3f06d280-a6e7-11eb-900d-be8bd9c49699.jpg)
-
-Authorization Look:
-![photo_2021-04-26_23-28-48](https://user-images.githubusercontent.com/69465350/116146649-652c7280-a6e7-11eb-876c-f79a68652e95.jpg)
 
 
  

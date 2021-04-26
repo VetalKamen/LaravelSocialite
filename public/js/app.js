@@ -49878,8 +49878,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\BookShop\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\BookShop\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Mentoring2021_projects\laravelTasks\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Mentoring2021_projects\laravelTasks\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
